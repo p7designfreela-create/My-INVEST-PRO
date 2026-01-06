@@ -5,7 +5,7 @@ import {
   Info, Save, Sparkles, X, Loader2, Send, RefreshCw, Wallet, 
   BarChart3, Calendar as CalendarIcon, Newspaper, Bell, ArrowUpRight, ArrowDownRight, Search,
   Activity, Layers, Briefcase, List, Moon, Sun, Palette, Filter, AlertTriangle, Calendar,
-  Download, Printer, Calculator, MinusCircle
+  Download, Printer, Calculator, MinusCircle, Star, Heart, Eye
 } from 'lucide-react';
 import { GoogleGenAI } from "@google/genai";
 
@@ -248,108 +248,7 @@ const B3_ASSETS: { t: string; n: string; type: string; s: string }[] = [
   { t: 'GALG11', n: 'Guardian Logística (Antigo)', type: 'FII', s: 'FII Logística' },
   { t: 'GARE11', n: 'Guardian Logística', type: 'FII', s: 'FII Logística' },
   { t: 'BLMG11', n: 'BlueMacaw Logística', type: 'FII', s: 'FII Logística' },
-  { t: 'PATL11', n: 'Pátria Logística', type: 'FII', s: 'FII Logística' },
-  
-  { t: 'KNIP11', n: 'Kinea Índices', type: 'FII', s: 'FII Papel' },
-  { t: 'KNCR11', n: 'Kinea Rendimentos', type: 'FII', s: 'FII Papel' },
-  { t: 'IRDM11', n: 'Iridium', type: 'FII', s: 'FII Papel' },
-  { t: 'HGCR11', n: 'CSHG Recebíveis', type: 'FII', s: 'FII Papel' },
-  { t: 'CPTS11', n: 'Capitânia', type: 'FII', s: 'FII Papel' },
-  { t: 'RECR11', n: 'REC Recebíveis', type: 'FII', s: 'FII Papel' },
-  { t: 'HCTR11', n: 'Hectare', type: 'FII', s: 'FII Papel' },
-  { t: 'DEVA11', n: 'Devant', type: 'FII', s: 'FII Papel' },
-  { t: 'VSLH11', n: 'Versalhes', type: 'FII', s: 'FII Papel' },
-  { t: 'MCCI11', n: 'Mauá', type: 'FII', s: 'FII Papel' },
-  { t: 'VGIR11', n: 'Valora RE', type: 'FII', s: 'FII Papel' },
-  { t: 'VRTA11', n: 'Fator Verità', type: 'FII', s: 'FII Papel' },
-  { t: 'KNHY11', n: 'Kinea High Yield', type: 'FII', s: 'FII Papel' },
-  { t: 'KNSC11', n: 'Kinea Securities', type: 'FII', s: 'FII Papel' },
-  { t: 'RBRY11', n: 'RBR Private', type: 'FII', s: 'FII Papel' },
-  { t: 'CVBI11', n: 'VBI CRI', type: 'FII', s: 'FII Papel' },
-  { t: 'BCRI11', n: 'Banestes', type: 'FII', s: 'FII Papel' },
-  { t: 'ARRI11', n: 'Átrio', type: 'FII', s: 'FII Papel' },
-  { t: 'CACR11', n: 'Cartesia', type: 'FII', s: 'FII Papel' },
-  { t: 'PLCR11', n: 'Plural', type: 'FII', s: 'FII Papel' },
-  { t: 'PORD11', n: 'Polo', type: 'FII', s: 'FII Papel' },
-  { t: 'OUJP11', n: 'Ouro Preto', type: 'FII', s: 'FII Papel' },
-  { t: 'VCRI11', n: 'Vinci Crédito', type: 'FII', s: 'FII Papel' },
-
-  { t: 'HGRE11', n: 'CSHG Real Estate', type: 'FII', s: 'FII Lajes' },
-  { t: 'BRCR11', n: 'BTG Corporate', type: 'FII', s: 'FII Lajes' },
-  { t: 'JSRE11', n: 'JS Real Estate', type: 'FII', s: 'FII Lajes' },
-  { t: 'RCRB11', n: 'Rio Bravo Renda', type: 'FII', s: 'FII Lajes' },
-  { t: 'PVBI11', n: 'VBI Prime', type: 'FII', s: 'FII Lajes' },
-  { t: 'VINO11', n: 'Vinci Offices', type: 'FII', s: 'FII Lajes' },
-  { t: 'RECT11', n: 'REC Renda', type: 'FII', s: 'FII Lajes' },
-  { t: 'TEPP11', n: 'Tellus', type: 'FII', s: 'FII Lajes' },
-  { t: 'XPPR11', n: 'XP Properties', type: 'FII', s: 'FII Lajes' },
-  { t: 'GTWR11', n: 'Green Towers', type: 'FII', s: 'FII Lajes' },
-  
-  { t: 'BCFF11', n: 'BTG Fundo de Fundos', type: 'FII', s: 'FII FOF' },
-  { t: 'HFOF11', n: 'Hedge Top FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'KFOF11', n: 'Kinea FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'MGFF11', n: 'Mogno FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'RBRF11', n: 'RBR Alpha', type: 'FII', s: 'FII FOF' },
-  { t: 'SNFF11', n: 'Suno FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'HGFF11', n: 'CSHG FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'CPFF11', n: 'Capitânia FOF', type: 'FII', s: 'FII FOF' },
-  { t: 'XPSF11', n: 'XP Selection', type: 'FII', s: 'FII FOF' },
-
-  { t: 'HGRU11', n: 'CSHG Renda Urbana', type: 'FII', s: 'FII Renda Urbana' },
-  { t: 'TRXF11', n: 'TRX Real Estate', type: 'FII', s: 'FII Renda Urbana' },
-  { t: 'ALZR11', n: 'Alianza Trust', type: 'FII', s: 'FII Híbrido' },
-  { t: 'VGHF11', n: 'Valora Hedge', type: 'FII', s: 'FII Híbrido' },
-  { t: 'GAME11', n: 'Guardian Multi', type: 'FII', s: 'FII Híbrido' },
-  { t: 'TORD11', n: 'Tordesilhas', type: 'FII', s: 'FII Híbrido' },
-  { t: 'RBVA11', n: 'Rio Bravo Varejo', type: 'FII', s: 'FII Varejo' },
-  { t: 'TGAR11', n: 'TG Ativo Real', type: 'FII', s: 'FII Desenv.' },
-  { t: 'MFII11', n: 'Mérito', type: 'FII', s: 'FII Desenv.' },
-  { t: 'HTMX11', n: 'Hotel Maxinvest', type: 'FII', s: 'FII Hotel' },
-
-  // FIAGROS
-  { t: 'RZAG11', n: 'Riza Agro', type: 'FII', s: 'Fiagro' },
-  { t: 'FGAA11', n: 'FG Agro', type: 'FII', s: 'Fiagro' },
-  { t: 'KNCA11', n: 'Kinea Agro', type: 'FII', s: 'Fiagro' },
-  { t: 'SNAG11', n: 'Suno Agro', type: 'FII', s: 'Fiagro' },
-  { t: 'VGIA11', n: 'Valora Agro', type: 'FII', s: 'Fiagro' },
-  { t: 'RZTR11', n: 'Riza Terrax', type: 'FII', s: 'Fiagro' },
-  { t: 'BTAL11', n: 'BTG Agro', type: 'FII', s: 'Fiagro' },
-
-  // ETFs
-  { t: 'BOVA11', n: 'iShares Ibovespa', type: 'ETF', s: 'ETF Ações' },
-  { t: 'IVVB11', n: 'S&P 500', type: 'ETF', s: 'ETF EUA' },
-  { t: 'SMAL11', n: 'Small Caps', type: 'ETF', s: 'ETF Ações' },
-  { t: 'HASH11', n: 'Hashdex Cripto', type: 'ETF', s: 'ETF Cripto' },
-  { t: 'NASD11', n: 'Trend Nasdaq', type: 'ETF', s: 'ETF EUA' },
-  { t: 'DIVO11', n: 'Itau Dividendos', type: 'ETF', s: 'ETF Dividendos' },
-  { t: 'GOLD11', n: 'Trend Ouro', type: 'ETF', s: 'ETF Commodity' },
-  { t: 'XINA11', n: 'Trend China', type: 'ETF', s: 'ETF Internacional' },
-  { t: 'EURP11', n: 'Trend Europa', type: 'ETF', s: 'ETF Internacional' },
-  
-  // BDRs
-  { t: 'AAPL34', n: 'Apple', type: 'BDR', s: 'BDR Tech' },
-  { t: 'MSFT34', n: 'Microsoft', type: 'BDR', s: 'BDR Tech' },
-  { t: 'GOGL34', n: 'Google', type: 'BDR', s: 'BDR Tech' },
-  { t: 'AMZO34', n: 'Amazon', type: 'BDR', s: 'BDR Varejo' },
-  { t: 'TSLA34', n: 'Tesla', type: 'BDR', s: 'BDR Auto' },
-  { t: 'NVDC34', n: 'Nvidia', type: 'BDR', s: 'BDR Tech' },
-  { t: 'META34', n: 'Meta', type: 'BDR', s: 'BDR Tech' },
-  { t: 'NFLX34', n: 'Netflix', type: 'BDR', s: 'BDR Tech' },
-  { t: 'DISB34', n: 'Disney', type: 'BDR', s: 'BDR Entretenimento' },
-  { t: 'MELI34', n: 'Mercado Livre', type: 'BDR', s: 'BDR E-commerce' },
-  { t: 'BABA34', n: 'Alibaba', type: 'BDR', s: 'BDR E-commerce' },
-  { t: 'COCA34', n: 'Coca-Cola', type: 'BDR', s: 'BDR Consumo' },
-  { t: 'MCDC34', n: 'McDonalds', type: 'BDR', s: 'BDR Consumo' },
-  { t: 'PFE34', n: 'Pfizer', type: 'BDR', s: 'BDR Saúde' },
-  { t: 'JNJ34', n: 'Johnson & Johnson', type: 'BDR', s: 'BDR Saúde' },
-  { t: 'PG34', n: 'P&G', type: 'BDR', s: 'BDR Consumo' },
-  { t: 'V34', n: 'Visa', type: 'BDR', s: 'BDR Financeiro' },
-  { t: 'MA34', n: 'Mastercard', type: 'BDR', s: 'BDR Financeiro' },
-  { t: 'BERK34', n: 'Berkshire', type: 'BDR', s: 'BDR Holding' },
-  { t: 'NUIN34', n: 'Nubank', type: 'BDR', s: 'BDR Financeiro' },
-  { t: 'XPBR31', n: 'XP Inc', type: 'BDR', s: 'BDR Financeiro' },
-  { t: 'PAGS34', n: 'PagSeguro', type: 'BDR', s: 'BDR Financeiro' },
-  { t: 'STNE34', n: 'Stone', type: 'BDR', s: 'BDR Financeiro' }
+  { t: 'PATL11', n: 'Pátria Logística', type: 'FII', s: 'FII Logística' }
 ];
 
 const ASSET_TYPES: Record<string, { label: string; code: string; color: string }> = {
@@ -502,7 +401,7 @@ const FlexibleChart = ({ data, type = 'bar', color = '#3b82f6', height = 200, fo
         })}
         {(type === 'line' || type === 'area') && (
            <svg className="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
-              {type === 'area' && (<defs><linearGradient id={`grad-${color}`} x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor={color} stopOpacity="0.5"/><stop offset="100%" stopColor={color} stopOpacity="0"/></linearGradient></defs>)}
+              {type === 'area' && (<defs><linearGradient id={`grad-${color}`} x1="0" x2="0" y1="0" x2="1" y1="0" y2="1"><stop offset="0%" stopColor={color} stopOpacity="0.5"/><stop offset="100%" stopColor={color} stopOpacity="0"/></linearGradient></defs>)}
               {type === 'area' && <polygon fill={`url(#grad-${color})`} stroke={color} strokeWidth="2" points={`0,100 ${data.map((d: any, i: number) => `${(i / (data.length - 1)) * 100},${100 - ((d.value / maxValue) * 90)}`).join(' ')} 100,100`} vectorEffect="non-scaling-stroke"/>}
               {type === 'line' && <polyline fill="none" stroke={color} strokeWidth="3" points={data.map((d: any, i: number) => `${(i / (data.length - 1)) * 100},${100 - ((d.value / maxValue) * 80)}`).join(' ')} vectorEffect="non-scaling-stroke" className="drop-shadow-md"/>}
            </svg>
@@ -530,7 +429,6 @@ const CalendarWidget = ({ events, currentMonth, theme }: any) => {
           const dayEvents = events.filter((e: any) => { const evtDate = new Date(e.date); return evtDate.getDate() === day && evtDate.getMonth() === new Date().getMonth(); });
           const hasEvents = dayEvents.length > 0;
           const isSelected = selectedDayInfo?.day === day;
-          // Fix logic error: compare numbers, not boolean to number
           return (
             <div key={day} onClick={() => hasEvents ? setSelectedDayInfo(isSelected ? null : { day, events: dayEvents }) : setSelectedDayInfo(null)} className={`h-10 rounded-lg flex flex-col items-center justify-center relative border transition-all cursor-pointer ${isSelected ? 'bg-blue-500/20 border-blue-500 shadow-inner' : ''} ${!isSelected && hasEvents ? theme.highlight + ' ' + theme.cardBorder : 'border-transparent'} ${day === today && !isSelected ? 'bg-blue-500 text-white font-bold' : ''} ${day !== today && !isSelected ? theme.text : ''}`}>
               <span className={`text-[10px] ${hasEvents ? 'font-bold' : ''}`}>{day}</span>
@@ -578,6 +476,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [dividends, setDividends] = useState<any[]>([]);
+  const [favorites, setFavorites] = useState<string[]>([]); // Novo estado para favoritos
   const [currentPrices, setCurrentPrices] = useState<Record<string, any>>({}); 
   const [predictedDividends, setPredictedDividends] = useState<any[]>([]); 
   const [yearlyDividends, setYearlyDividends] = useState<Record<string, number>>({}); 
@@ -614,6 +513,7 @@ export default function App() {
     load('ir_news_feed', setNewsFeed); 
     load('ir_predictions', setPredictedDividends);
     load('ir_yearly_dividends', setYearlyDividends);
+    load('ir_favorites', setFavorites); // Carregar favoritos
   }, []);
 
   useEffect(() => { localStorage.setItem('ir_theme', JSON.stringify(currentTheme)); }, [currentTheme]);
@@ -623,6 +523,7 @@ export default function App() {
   useEffect(() => { localStorage.setItem('ir_news_feed', JSON.stringify(newsFeed)); }, [newsFeed]);
   useEffect(() => { localStorage.setItem('ir_predictions', JSON.stringify(predictedDividends)); }, [predictedDividends]);
   useEffect(() => { localStorage.setItem('ir_yearly_dividends', JSON.stringify(yearlyDividends)); }, [yearlyDividends]);
+  useEffect(() => { localStorage.setItem('ir_favorites', JSON.stringify(favorites)); }, [favorites]);
 
   const theme = THEMES[currentTheme];
 
@@ -643,8 +544,11 @@ export default function App() {
   };
 
   const handleUpdateMarketData = async () => {
-    const tickers = [...new Set(transactions.map(t => t.ticker))];
-    if (tickers.length === 0) return alert("Adicione ativos primeiro!");
+    // Incluir tickers da carteira e favoritos
+    const portfolioTickers = transactions.map(t => t.ticker);
+    const tickers = [...new Set([...portfolioTickers, ...favorites])];
+    
+    if (tickers.length === 0) return alert("Adicione ativos ou favoritos primeiro!");
     setIsUpdatingMarket(true);
     
     const pricePrompt = `Pesquise o PREÇO ATUAL e a VARIAÇÃO DIÁRIA (%) de hoje para: ${tickers.join(', ')}. Retorne JSON (sem markdown): { "TICKER": { "price": 0.00, "change": 0.00 } }`;
@@ -654,41 +558,41 @@ export default function App() {
       if (json) setCurrentPrices(prev => ({ ...prev, ...json }));
     }
 
-    const newsPrompt = `
-      CONTEXTO: Hoje é ${new Date().toLocaleDateString('pt-BR')}.
-      TAREFA: Para os ativos ${tickers.join(', ')}:
-      1. Encontre 1 notícia curta.
-      2. Próximo provento (Data e Valor). Se não houver data FUTURA definida, retorne null/0.
-      3. Pesquise a SOMA TOTAL de proventos (Dividendos + JCP) cujas DATAS DE ANÚNCIO (Data Com) ocorreram nos últimos 12 meses por cota.
-      
-      IMPORTANTE:
-      - NÃO explique nada.
-      - NÃO converse.
-      - Retorne APENAS o JSON válido.
-      - Se faltar dado, use null ou 0.
-      
-      FORMATO DE SAÍDA (JSON):
-      {
-        "dividends": [{ "ticker": "AAA", "date": "YYYY-MM-DD", "type": "Dividendo", "value": 0.50, "info": "R$ 0,50" }],
-        "yearlyTotal": { "AAA": 2.45, "BBB": 1.20 }
-      }
-    `;
-    const newsRes = await callGemini(newsPrompt, "Analista de Proventos e Mercado.", true);
-    if (newsRes) {
-      const json = cleanAndParseJSON(newsRes);
-      if (json) {
-        if(json.dividends) setPredictedDividends(json.dividends.filter((d: any) => d.value > 0));
-        if(json.yearlyTotal) setYearlyDividends(prev => ({ ...prev, ...json.yearlyTotal }));
+    // Apenas atualizar proventos para tickers da carteira
+    const portfolioOnly = [...new Set(portfolioTickers)];
+    if (portfolioOnly.length > 0) {
+      const newsPrompt = `
+        CONTEXTO: Hoje é ${new Date().toLocaleDateString('pt-BR')}.
+        TAREFA: Para os ativos ${portfolioOnly.join(', ')}:
+        1. Encontre 1 notícia curta.
+        2. Próximo provento (Data e Valor).
+        3. Soma total de proventos nos últimos 12 meses.
+        
+        RETORNE APENAS JSON:
+        {
+          "dividends": [{ "ticker": "AAA", "date": "YYYY-MM-DD", "type": "Dividendo", "value": 0.50, "info": "R$ 0,50" }],
+          "yearlyTotal": { "AAA": 2.45, "BBB": 1.20 }
+        }
+      `;
+      const newsRes = await callGemini(newsPrompt, "Analista de Proventos.", true);
+      if (newsRes) {
+        const json = cleanAndParseJSON(newsRes);
+        if (json) {
+          if(json.dividends) setPredictedDividends(json.dividends.filter((d: any) => d.value > 0));
+          if(json.yearlyTotal) setYearlyDividends(prev => ({ ...prev, ...json.yearlyTotal }));
+        }
       }
     }
     setIsUpdatingMarket(false);
   };
 
   const handleFetchNews = async () => {
-    const tickers = [...new Set(transactions.map(t => t.ticker))];
+    const portfolioTickers = transactions.map(t => t.ticker);
+    const tickers = [...new Set([...portfolioTickers, ...favorites])];
+    
     if (tickers.length === 0) return alert("Adicione ativos para buscar notícias.");
     setIsUpdatingNews(true);
-    const prompt = `Pesquise notícias financeiras recentes (últimos 15 dias) sobre: ${tickers.join(', ')}. Retorne APENAS um JSON válido (sem markdown): { "news": [{ "ticker": "PETR4", "date": "2024-05-20", "title": "Título", "summary": "Resumo", "source": "Fonte" }] }`;
+    const prompt = `Pesquise notícias financeiras recentes sobre: ${tickers.join(', ')}. Retorne APENAS JSON: { "news": [{ "ticker": "PETR4", "date": "2024-05-20", "title": "Título", "summary": "Resumo", "source": "Fonte" }] }`;
     const res = await callGemini(prompt, "Agregador de notícias.", true);
     if (res) { const json = cleanAndParseJSON(res); if (json && json.news) setNewsFeed(json.news); }
     setIsUpdatingNews(false);
@@ -700,6 +604,15 @@ export default function App() {
     const currentIndex = themes.indexOf(currentTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
     setCurrentTheme(themes[nextIndex]);
+  };
+
+  const toggleFavorite = (ticker: string) => {
+    const t = ticker.toUpperCase();
+    if (favorites.includes(t)) {
+      setFavorites(favorites.filter(f => f !== t));
+    } else {
+      setFavorites([...favorites, t]);
+    }
   };
 
   const handleSmartImport = async () => {
@@ -750,23 +663,6 @@ export default function App() {
 
   const selectTicker = (asset: any) => { setForm({ ...form, ticker: asset.t, assetType: asset.type || 'ACAO' }); setShowTickerSuggestions(false); };
 
-  // --- EXPORTAR CSV ---
-  const downloadCSV = () => {
-    const headers = ["Data", "Ativo", "Operacao", "Qtd", "Preco", "Taxas", "Total", "Corretora"];
-    const rows = transactions.map(t => [
-      t.date, t.ticker, t.type, t.quantity, t.price, t.fees, ((t.quantity * t.price) + (t.type==='COMPRA'?t.fees:-t.fees)).toFixed(2), t.broker
-    ]);
-    const csvContent = "data:text/csv;charset=utf-8," + headers.join(",") + "\n" + rows.map(e => e.join(",")).join("\n");
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "transacoes_ir.csv");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-  const printReport = () => { window.print(); };
-
   // --- CÁLCULOS ---
   const { portfolio, totalPatrimony, totalCost, chartData, irReport, advancedDividends, topPayers, dividendsDetail } = useMemo(() => {
     const port: Record<string, PortfolioAsset> = {}; 
@@ -774,10 +670,8 @@ export default function App() {
     const irPort: Record<string, PortfolioAsset> = {};
     const irMonthlySummary: Record<string, any> = {}; 
     
-    // Sort transactions by date
     const sortedTransactions = [...transactions].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-    // 1. Processar Transações para Carteira e IR
     sortedTransactions.forEach(t => {
       const ym = t.date.substring(0, 7);
       if(!mResults[ym]) mResults[ym] = { totalSales: 0, profits: { ACAO: 0, FII: 0, ETF: 0, BDR: 0, CRIPTO: 0 } };
@@ -785,7 +679,6 @@ export default function App() {
       const assetInfo = (B3_ASSETS.find(a => a.t === t.ticker) || {}) as any;
       const segment = assetInfo.s || 'Outros';
 
-      // Carteira Geral (Posição Atual)
       if(!port[t.ticker]) port[t.ticker] = { ticker: t.ticker, assetType: t.assetType, segment, quantity: 0, totalCost: 0, averagePrice: 0, brokers: new Set() };
       const asset = port[t.ticker]; if(t.broker) asset.brokers.add(t.broker);
       
@@ -803,10 +696,10 @@ export default function App() {
           if(t.assetType === 'ACAO') mResults[ym].totalSales += saleVal; 
       }
 
-      // Lógica IR (Ano Selecionado)
       const transDate = new Date(t.date); const cutoffDate = new Date(`${selectedYear}-12-31`);
       if (transDate <= cutoffDate) {
-          if(!irPort[t.ticker]) irPort[t.ticker] = { ticker: t.ticker, assetType: t.assetType, quantity: 0, totalCost: 0, averagePrice: 0, brokers: new Set() };
+          // fix: add segment to irPort initialization
+          if(!irPort[t.ticker]) irPort[t.ticker] = { ticker: t.ticker, assetType: t.assetType, segment, quantity: 0, totalCost: 0, averagePrice: 0, brokers: new Set() };
           const irAsset = irPort[t.ticker]; if(t.broker) irAsset.brokers.add(t.broker);
           
           if(t.type === 'COMPRA') { 
@@ -821,20 +714,19 @@ export default function App() {
           }
       }
 
-      // Cálculo de Lucro/Prejuízo Mensal para IR
       if (transDate.getFullYear() === selectedYear) {
-          if(!irMonthlySummary[ym]) irMonthlySummary[ym] = { sales: { ACAO: 0, FII: 0, ETF: 0 }, profit: { ACAO: 0, FII: 0, ETF: 0 }, tax: 0 };
+          if(!irMonthlySummary[ym]) irMonthlySummary[ym] = { sales: { ACAO: 0, FII: 0, ETF: 0 } as Record<string, number>, profit: { ACAO: 0, FII: 0, ETF: 0 } as Record<string, number>, tax: 0 };
           if(t.type === 'VENDA') {
              const saleValue = (t.quantity * t.price) - t.fees;
              const cost = t.quantity * asset.averagePrice; 
              const result = saleValue - cost;
-             irMonthlySummary[ym].sales[t.assetType] = (irMonthlySummary[ym].sales[t.assetType] || 0) + saleValue;
-             irMonthlySummary[ym].profit[t.assetType] = (irMonthlySummary[ym].profit[t.assetType] || 0) + result;
+             // fix: address arithmetic operation error by casting to number explicitly
+             irMonthlySummary[ym].sales[t.assetType] = (Number(irMonthlySummary[ym].sales[t.assetType]) || 0) + saleValue;
+             irMonthlySummary[ym].profit[t.assetType] = (Number(irMonthlySummary[ym].profit[t.assetType]) || 0) + result;
           }
       }
     });
 
-    // Calcular Imposto Devido por Mês
     Object.keys(irMonthlySummary).forEach(ym => {
         const data = irMonthlySummary[ym];
         let tax = 0;
@@ -858,7 +750,6 @@ export default function App() {
     const chartProfitability = activeAssets.map(a => { const currPrice = currentPrices[a.ticker]?.price || a.averagePrice; const prof = ((currPrice / a.averagePrice) - 1) * 100; return { label: a.ticker, value: prof }; });
     activeAssets.forEach(a => { tCost += a.totalCost; const price = currentPrices[a.ticker]?.price || a.averagePrice; tPat += a.quantity * price; });
 
-    // --- FUSÃO DE PROVENTOS ---
     const allDividends = [...dividends];
     predictedDividends.forEach(p => {
         const asset = port[p.ticker];
@@ -876,12 +767,9 @@ export default function App() {
     allDividends.forEach(d => {
         const mKey = d.date.substring(0, 7); 
         const yKey = d.date.substring(0, 4); 
-        
         divsGrouped.monthly[mKey] = (divsGrouped.monthly[mKey] || 0) + d.value;
         divsGrouped.yearly[yKey] = (divsGrouped.yearly[yKey] || 0) + d.value;
         divsGrouped.byAsset[d.ticker] = (divsGrouped.byAsset[d.ticker] || 0) + d.value;
-
-        // Detalhamento por mês
         if (!divsGrouped.details[mKey]) divsGrouped.details[mKey] = [];
         divsGrouped.details[mKey].push(d);
     });
@@ -895,31 +783,45 @@ export default function App() {
         const invested = getInvestedCapitalAtDate(endDate);
         const value = divsGrouped[dividendView as keyof typeof divsGrouped][key];
         const yieldVal = invested > 0 ? (value / invested) * 100 : 0;
-        
-        return {
-            label: dividendView === 'monthly' ? formatDate(`${key}-01`).substring(3) : key,
-            originalKey: key, 
-            value: value,
-            yield: yieldVal,
-            invested: invested,
-            details: true 
-        };
+        return { label: dividendView === 'monthly' ? formatDate(`${key}-01`).substring(3) : key, originalKey: key, value: value, yield: yieldVal, invested: invested, details: true };
     });
     
     const topPayers = Object.entries(divsGrouped.byAsset).map(([ticker, value]) => ({ ticker, value })).sort((a, b) => b.value - a.value);
 
-    return { 
-        portfolio: port, 
-        monthlyResults: mResults, 
-        totalPatrimony: tPat, 
-        totalCost: tCost, 
-        chartData: { divsByAsset: chartDivsByAsset, divsByMonth: chartDivsByMonth, profitability: chartProfitability, segments: chartSegments, classes: chartClasses, topAssets: chartTopAssets },
-        irReport: { portfolio: irPort, monthlySummary: irMonthlySummary },
-        advancedDividends: advancedChartData,
-        topPayers: topPayers,
-        dividendsDetail: divsGrouped.details
-    };
+    return { portfolio: port, monthlyResults: mResults, totalPatrimony: tPat, totalCost: tCost, chartData: { divsByAsset: chartDivsByAsset, divsByMonth: chartDivsByMonth, profitability: chartProfitability, segments: chartSegments, classes: chartClasses, topAssets: chartTopAssets }, irReport: { portfolio: irPort, monthlySummary: irMonthlySummary }, advancedDividends: advancedChartData, topPayers, dividendsDetail: divsGrouped.details };
   }, [transactions, currentPrices, dividends, predictedDividends, yearlyDividends, selectedYear, dividendView]); 
+
+  // --- Relatórios ---
+  // fix: implement downloadCSV function
+  const downloadCSV = () => {
+    const headers = ["Ticker", "Tipo", "Quantidade", "Custo Total", "Preço Médio"];
+    const rows = Object.values(irReport.portfolio)
+      .filter((a: any) => a.quantity > 0)
+      .map((a: any) => [
+        a.ticker,
+        ASSET_TYPES[a.assetType]?.label || a.assetType,
+        a.quantity,
+        a.totalCost.toFixed(2),
+        a.averagePrice.toFixed(2)
+      ]);
+    
+    let csvContent = "data:text/csv;charset=utf-8," 
+      + headers.join(",") + "\n"
+      + rows.map(e => e.join(",")).join("\n");
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `relatorio_ir_${selectedYear}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // fix: implement printReport function
+  const printReport = () => {
+    window.print();
+  };
 
   const copyToClipboard = (text: string) => { navigator.clipboard.writeText(text); alert('Copiado!'); };
 
@@ -928,7 +830,7 @@ export default function App() {
       <nav className={`${theme.nav} border-b ${theme.cardBorder} sticky top-0 z-40 backdrop-blur-md`}>
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3"><div className="bg-gradient-to-br from-blue-600 to-purple-600 text-white p-2 rounded-lg shadow-lg shadow-blue-500/20"><TrendingUp size={20} /></div><div><h1 className={`text-xl font-bold tracking-tight ${theme.text} leading-none`}>Invest<span className="text-blue-500">Pro</span></h1><span className={`text-[10px] ${theme.subText} font-medium uppercase tracking-widest`}>Terminal Inteligente</span></div></div>
-          <div className={`hidden md:flex items-center gap-1 ${theme.highlight} p-1 rounded-xl`}>{[{ id: 'dashboard', label: 'Mercado', icon: BarChart3 }, { id: 'charts', label: 'Gráficos', icon: PieChart }, { id: 'news', label: 'Notícias', icon: Newspaper }, { id: 'transactions', label: 'Lançamentos', icon: Plus }, { id: 'report', label: 'Relatório IR', icon: FileText }].map(tab => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === tab.id ? `${theme.card} ${theme.text} shadow-sm ring-1 ring-black/5` : `${theme.subText} hover:${theme.text} hover:bg-white/10`}`}><tab.icon size={16} />{tab.label}</button>))}</div>
+          <div className={`hidden md:flex items-center gap-1 ${theme.highlight} p-1 rounded-xl`}>{[{ id: 'dashboard', label: 'Mercado', icon: BarChart3 }, { id: 'favorites', label: 'Favoritos', icon: Star }, { id: 'charts', label: 'Gráficos', icon: PieChart }, { id: 'news', label: 'Notícias', icon: Newspaper }, { id: 'transactions', label: 'Lançamentos', icon: Plus }, { id: 'report', label: 'Relatório IR', icon: FileText }].map(tab => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === tab.id ? `${theme.card} ${theme.text} shadow-sm ring-1 ring-black/5` : `${theme.subText} hover:${theme.text} hover:bg-white/10`}`}><tab.icon size={16} />{tab.label}</button>))}</div>
           <div className="flex items-center gap-2"><button onClick={toggleTheme} className={`p-2 rounded-full ${theme.highlight} ${theme.text} hover:opacity-80 transition-all`} title={`Tema: ${theme.name}`}><theme.icon size={16}/></button><button onClick={handleUpdateMarketData} disabled={isUpdatingMarket} className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${isUpdatingMarket ? 'opacity-50' : ''} ${theme.highlight} ${theme.accent} ${theme.cardBorder}`}>{isUpdatingMarket ? <Loader2 size={14} className="animate-spin" /> : <RefreshCw size={14} />}<span className="hidden sm:inline">Atualizar</span></button></div>
         </div>
       </nav>
@@ -955,6 +857,87 @@ export default function App() {
           </div>
         )}
 
+        {/* ABA FAVORITOS */}
+        {activeTab === 'favorites' && (
+          <div className="animate-fade-in space-y-6">
+             <div className="flex items-center justify-between mb-4">
+               <div>
+                 <h2 className={`text-xl font-bold ${theme.text} flex items-center gap-2`}>
+                   <Star size={24} className="text-yellow-500 fill-yellow-500"/> Meus Favoritos
+                 </h2>
+                 <p className={`text-xs ${theme.subText} mt-1`}>Monitore ativos de interesse e oportunidades de mercado</p>
+               </div>
+               <div className="relative w-full max-w-xs group">
+                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-yellow-500 transition-colors">
+                   <Search size={16} />
+                 </div>
+                 <input 
+                    type="text" 
+                    placeholder="Adicionar ticker (ex: WEGE3)" 
+                    className={`w-full pl-10 pr-4 py-2 ${theme.input} rounded-xl text-sm outline-none transition-all`}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        const val = (e.target as HTMLInputElement).value.toUpperCase().trim();
+                        if (val && !favorites.includes(val)) {
+                          toggleFavorite(val);
+                          (e.target as HTMLInputElement).value = '';
+                        }
+                      }
+                    }}
+                 />
+               </div>
+             </div>
+
+             {favorites.length > 0 ? (
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                 {favorites.map(ticker => {
+                   const data = currentPrices[ticker] || { price: 0, change: 0 };
+                   const assetInfo = B3_ASSETS.find(a => a.t === ticker);
+                   return (
+                     <div key={ticker} className={`${theme.card} border ${theme.cardBorder} p-5 rounded-2xl shadow-sm hover:shadow-md transition-all group relative overflow-hidden`}>
+                        <div className="flex justify-between items-start mb-4">
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h3 className={`font-bold text-lg ${theme.text}`}>{ticker}</h3>
+                              <span className={`text-[9px] px-1.5 py-0.5 rounded ${theme.highlight} ${theme.subText} font-bold`}>
+                                {assetInfo?.type || 'ATIVO'}
+                              </span>
+                            </div>
+                            <p className={`text-[10px] ${theme.subText} truncate max-w-[140px]`}>{assetInfo?.n || 'Empresa Monitorada'}</p>
+                          </div>
+                          <button onClick={() => toggleFavorite(ticker)} className="text-red-400 hover:text-red-600 transition-colors">
+                            <Trash2 size={16} />
+                          </button>
+                        </div>
+                        
+                        <div className="flex justify-between items-end">
+                          <div>
+                            <div className={`text-xl font-bold ${theme.text}`}>{data.price > 0 ? formatCurrency(data.price) : '---'}</div>
+                            <div className={`text-[10px] font-medium flex items-center gap-1 mt-1 ${data.change >= 0 ? theme.success : theme.danger}`}>
+                              {data.change > 0 ? <ArrowUpRight size={12}/> : <ArrowDownRight size={12}/>}
+                              {data.change.toFixed(2)}% hoje
+                            </div>
+                          </div>
+                          <div className={`p-2 rounded-lg ${theme.highlight} opacity-20 group-hover:opacity-100 transition-opacity`}>
+                            <Eye size={18} className={theme.accent} />
+                          </div>
+                        </div>
+                     </div>
+                   );
+                 })}
+               </div>
+             ) : (
+               <div className={`text-center py-20 ${theme.card} border ${theme.cardBorder} rounded-3xl border-dashed`}>
+                 <div className={`w-16 h-16 ${theme.highlight} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                   <Star size={32} className="text-gray-400" />
+                 </div>
+                 <h3 className={`font-bold ${theme.text}`}>Sua watchlist está vazia</h3>
+                 <p className={`text-sm ${theme.subText} mt-1 max-w-xs mx-auto`}>Adicione ativos que você deseja monitorar mas ainda não possui na carteira.</p>
+               </div>
+             )}
+          </div>
+        )}
+
         {activeTab === 'news' && (
           <div className="animate-fade-in space-y-6">
              <div className="flex items-center justify-between mb-4">
@@ -971,7 +954,6 @@ export default function App() {
           <div className="animate-fade-in space-y-6">
              <div className="flex items-center justify-between mb-2"><h2 className={`text-xl font-bold ${theme.text}`}>Análise Gráfica</h2><div className={`text-xs ${theme.subText} ${theme.card} px-3 py-1 rounded-full border ${theme.cardBorder} shadow-sm`}>Dados baseados nos lançamentos e cotações atuais</div></div>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               
                <div className={`${theme.card} p-6 rounded-2xl shadow-sm border ${theme.cardBorder} md:col-span-2 relative group`}>
                   <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                      <div><h3 className={`font-bold ${theme.text} flex items-center gap-2`}><BarChart3 size={18} className="text-purple-500" /> Proventos Recebidos</h3><p className={`text-xs ${theme.subText} mt-1`}>Baseado na <strong>Data de Anúncio (Com)</strong>.</p></div>
@@ -1008,7 +990,6 @@ export default function App() {
                       </div>
                   </div>
                </div>
-               
                <div className={`${theme.card} p-6 rounded-2xl shadow-sm border ${theme.cardBorder} md:col-span-2`}><div className="flex justify-between items-start mb-6"><div><h3 className={`font-bold ${theme.text} flex items-center gap-2`}><Briefcase size={18} className="text-orange-500" /> Exposição por Segmento</h3><p className={`text-xs ${theme.subText} mt-1`}>Clique nas fatias para ver os ativos</p></div></div><div className="flex flex-col md:flex-row items-center gap-8"><div className="flex-1 w-full"><FlexibleChart data={chartData.segments} type="donut" color="#f97316" height={260} formatValue={formatCurrency} onSliceClick={(item: any) => setSelectedSegment(item.label === selectedSegment ? null : item.label)} theme={theme} /></div>{selectedSegment && (<div className={`w-full md:w-1/3 bg-orange-500/10 rounded-xl p-4 border border-orange-500/20 animate-fade-in`}><h4 className="font-bold text-orange-600 text-sm mb-3 flex items-center gap-2"><List size={14}/> Ativos em: {selectedSegment}</h4><div className="space-y-2 max-h-40 overflow-y-auto">{Object.values(portfolio).filter(a => a.segment === selectedSegment && a.quantity > 0).map(a => (<div key={a.ticker} className={`flex justify-between text-xs ${theme.card} p-2 rounded shadow-sm`}><span className={`font-bold ${theme.text}`}>{a.ticker}</span><span className={theme.subText}>{formatCurrency(a.quantity * (currentPrices[a.ticker]?.price || a.averagePrice))}</span></div>))}</div></div>)}</div></div>
                <div className={`${theme.card} p-6 rounded-2xl shadow-sm border ${theme.cardBorder}`}><div className="flex justify-between items-start mb-6"><div><h3 className={`font-bold ${theme.text} flex items-center gap-2`}><PieChart size={18} className="text-blue-500" /> Alocação por Classe</h3></div></div><FlexibleChart data={chartData.classes} type="donut" color="#3b82f6" height={220} formatValue={formatCurrency} onSliceClick={() => {}} theme={theme} /></div>
                <div className={`${theme.card} p-6 rounded-2xl shadow-sm border ${theme.cardBorder}`}><div className="flex justify-between items-start mb-6"><div><h3 className={`font-bold ${theme.text} flex items-center gap-2`}><Layers size={18} className="text-indigo-500" /> Top 5 Maiores Posições</h3></div></div><FlexibleChart data={chartData.topAssets} type="bar-horizontal" color="#6366f1" height={220} formatValue={formatCurrency} onSliceClick={() => {}} theme={theme} /></div>
@@ -1017,7 +998,7 @@ export default function App() {
           </div>
         )}
 
-        {/* === ABA LANÇAMENTOS === */}
+        {/* LANÇAMENTOS */}
         {activeTab === 'transactions' && (
            <div className={`animate-fade-in ${theme.card} rounded-2xl shadow-sm border ${theme.cardBorder} p-6 relative`}>
               <div className="flex justify-between items-center mb-6"><h2 className={`text-lg font-bold ${theme.text}`}>Lançamentos</h2><button onClick={() => setShowImportModal(true)} className={`text-xs bg-purple-500/10 text-purple-600 px-3 py-1.5 rounded-full flex items-center gap-1 font-semibold border border-purple-500/20 hover:bg-purple-500/20 transition-colors`}><Sparkles size={14} /> Importar com IA</button></div>
@@ -1036,7 +1017,7 @@ export default function App() {
            </div>
         )}
 
-        {/* === ABA RELATÓRIO --- */}
+        {/* RELATÓRIO IR */}
         {activeTab === 'report' && (
           <div className="animate-fade-in space-y-8">
             <div className={`bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 flex items-start gap-4 shadow-sm`}>
@@ -1050,7 +1031,6 @@ export default function App() {
                 <button onClick={printReport} className={`flex items-center gap-2 ${theme.card} ${theme.text} border ${theme.cardBorder} px-4 py-2 rounded-lg shadow-sm font-semibold hover:${theme.highlight}`}><Printer size={16} /> Imprimir / PDF</button>
             </div>
 
-            {/* SEÇÃO 1: BENS E DIREITOS */}
             <section>
               <div className="flex items-center gap-2 mb-4"><div className="bg-blue-600 text-white p-2 rounded-lg"><FileText className="w-5 h-5" /></div><h2 className={`text-xl font-bold ${theme.text}`}>Ficha: Bens e Direitos (Posição em 31/12)</h2></div>
               <div className="grid gap-4">
@@ -1064,10 +1044,9 @@ export default function App() {
               </div>
             </section>
 
-            {/* SEÇÃO 2: RENDA VARIÁVEL (MENSAL) */}
             <section>
               <div className="flex items-center gap-2 mb-4"><div className="bg-purple-600 text-white p-2 rounded-lg"><Activity className="w-5 h-5" /></div><h2 className={`text-xl font-bold ${theme.text}`}>Ficha: Renda Variável (Lucro/Prejuízo Mensal)</h2></div>
-              <p className={`text-sm ${theme.subText} mb-4`}>Declare os valores abaixo mês a mês na ficha de Renda Variável. Observe os valores de imposto devido (DARF) que deveriam ter sido pagos.</p>
+              <p className={`text-sm ${theme.subText} mb-4`}>Declare os valores abaixo mês a mês na ficha de Renda Variável.</p>
               <div className={`${theme.card} border ${theme.cardBorder} rounded-xl overflow-hidden`}>
                 <table className="w-full text-sm">
                    <thead>
@@ -1087,7 +1066,6 @@ export default function App() {
                          const monthName = MONTHS[parseInt(month)-1];
                          const isExempt = data.sales.ACAO < 20000;
                          const tax = data.tax;
-                         
                          return (
                             <tr key={ym} className={`hover:${theme.highlight}`}>
                                <td className={`p-3 font-medium ${theme.text}`}>{monthName}</td>
@@ -1111,4 +1089,7 @@ export default function App() {
         )}
       </main>
 
-      {showImportModal && (<div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4"><div className={`${theme.card} rounded-2xl shadow-2xl w-full max-w-lg p-6 transform transition-all scale-100`}><h3 className={`text-xl font-bold ${theme.text} mb-2 flex items-center gap-2`}><Sparkles className="text-purple-600"/> Importação Mágica</h3><textarea className={`w-full h-32 border ${theme.cardBorder} rounded-xl p-4 text-sm ${theme.input}`} placeholder="Ex: Comprei 200 ações de ITAUSA hoje a 9 reais..." value={importText} onChange={e => setImportText(e.target.value)} /><div className="flex justify-end gap-3 mt-4"><button onClick={() => setShowImportModal(false)} className={`px-4 py-2 ${theme.subText} font-medium hover:${theme.highlight} rounded-lg`}>Cancelar</button><button onClick={handleSmartImport} disabled={isImporting} className="px-6 py-2 bg-purple-600 text-white rounded-lg font-medium shadow-lg shadow-purple-200 flex items-center gap-2 hover:bg-purple-70
+      {showImportModal && (<div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4"><div className={`${theme.card} rounded-2xl shadow-2xl w-full max-w-lg p-6 transform transition-all scale-100`}><h3 className={`text-xl font-bold ${theme.text} mb-2 flex items-center gap-2`}><Sparkles className="text-purple-600"/> Importação Mágica</h3><textarea className={`w-full h-32 border ${theme.cardBorder} rounded-xl p-4 text-sm ${theme.input}`} placeholder="Ex: Comprei 200 ações de ITAUSA hoje a 9 reais..." value={importText} onChange={e => setImportText(e.target.value)} /><div className="flex justify-end gap-3 mt-4"><button onClick={() => setShowImportModal(false)} className={`px-4 py-2 ${theme.subText} font-medium hover:${theme.highlight} rounded-lg`}>Cancelar</button><button onClick={handleSmartImport} disabled={isImporting} className="px-6 py-2 bg-purple-600 text-white rounded-lg font-medium shadow-lg shadow-purple-200 flex items-center gap-2 hover:bg-purple-700 transition-all">{isImporting ? <Loader2 size={16} className="animate-spin" /> : 'Processar Texto'}</button></div></div></div>)}
+    </div>
+  );
+}
