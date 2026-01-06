@@ -1,0 +1,8 @@
+{
+  "name": "My-IR-Pro",
+  "description": "app: 0.0.1",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
